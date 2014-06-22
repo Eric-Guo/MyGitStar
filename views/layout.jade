@@ -11,11 +11,11 @@ html
 		- else
 			//- production 模式 CDN服务
 			//- bootstrap
-			link(href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css", rel="stylesheet")
+			link(href="//cdn.staticfile.org/twitter-bootstrap/3.1.1/css/bootstrap.min.css", rel="stylesheet")
 			//- foot-asesome
-			link(href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css", rel="stylesheet")
+			link(href="//cdn.staticfile.org/font-awesome/4.0.3/css/font-awesome.min.css", rel="stylesheet")
 		link(rel='stylesheet', href='/stylesheets/build/style.min.css')
-			
+
 	body
 		header#navHeader.navbar.navbar-fixed-top.navbar-default(data-active='#{active}', role='navigation')
 			div.container
@@ -37,7 +37,7 @@ html
 								a(href='/signin') 登入
 						if user
 							li#mystar
-								a(href='/mystar') 
+								a(href='/mystar')
 									i.fa.fa-star-o.fa-lg
 									| &nbsp;Star
 					if user
@@ -82,8 +82,8 @@ html
 			script(src='/javascripts/vendor/jquery.min.js')
 			script(src='/javascripts/vendor/bootstrap.min.js')
 		else
-			script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
-			script(src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
+			script(src='//cdn.staticfile.org/jquery/1.11.1/jquery.min.js')
+			script(src="//cdn.staticfile.org/twitter-bootstrap/3.1.1/js/bootstrap.min.js")
 		//- 路由render指定加载的脚本
 		if script
 			script(src='/javascripts/build/' + script)
